@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.container {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1440px;
+}
+
+.header-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.header-item {
+    list-style-type: none;
+    margin-left: 25px;
+}
+
+.header-item:first-child {
+    margin-left: 0;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-link {
+    text-decoration: none;
+    color: #000;
+    opacity: 0.8;
+    transition: 0.3s ease;
+}
+
+.header-link:hover {
+    color: #ff1b36;
+}
+
+.logo img {
+    width: 170px;
+}
+
+#input,
+#searchBtn {
+    padding: 8px;
+    font-size: 18px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    background-color: #F0F4FF;
+    color: #555;
+}
+
+.sana,
+.soat {
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.main-flex {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+
+.bulutl {
+    display: flex;
+    align-items: center;
+}
+
+.temp-title {
+    margin: 0;
+}
+
+.news {
+    margin-top: 50px;
+}
+
+@media (max-width:400px) {
+    .logo {
+        margin-bottom: 50px;
+    }
+    #form {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    #searchBtn {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 25px;
+    }
+    .site-header {
+        flex-direction: column;
+    }
+    .header-right {
+        flex-direction: column;
+    }
+    .main-flex {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+@media (max-width:800px) {
+    .site-header {
+        flex-wrap: wrap;
+    }
+    .main-flex {
+        flex-wrap: wrap;
+    }
+    .header-right {
+        flex-wrap: wrap;
+        margin-top: 25px;
+    }
+    #searchBtn {
+        margin-top: 25px;
+    }
+    #form {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+}
+
+@media (max-width:900px) {
+    .header-right {
+        flex-wrap: wrap;
+    }
+    .site-header {
+        flex-wrap: wrap;
+    }
+    .main-flex {
+        flex-wrap: wrap;
+    }
+}
