@@ -11,36 +11,50 @@ const mainTemp = document.querySelector('.asos')
 const maxTemp = document.querySelector('.max')
 const feelTemp = document.querySelector('.his')
 const sana = document.querySelector('.sana')
+const form = document.getElementById('form')
+const nom = document.getElementById('nom')
+const mainS = document.querySelector('.main-flex')
+const loader = document.querySelector('#loader')
+const qidir = document.getElementById('qidir')
+loader.classList.add('hidden')
 
-const api_url = `https://api.openweathermap.org/data/2.5/weather?q=Fergana&units=metric&appid=${apiKey}`
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+    console.log(input.value);
 
+    const api_url = `https://api.openweathermap.org/data/2.5/weather?q=${input.value}&units=metric&appid=${apiKey}`
+    nom.innerHTML = input.value
 
-async function requestApi(url) {
-    try {
-        const req = await fetch(url)
+    async function requestApi(url) {
+        loader.classList.remove('hidden')
+        try {
+            const req = await fetch(url)
 
-        if (!req.ok) {
+            if (!req.ok) {
+                // if (!(req.status == 200)) {
+                //     alert('Davlat nomini tekshiring')
+                // }
+                throw new Error('Xatolik mavjud')
+            }
+            const data = await req.json()
 
-            // if (!(req.status == 200)) {
-            //     alert('Davlat nomini tekshiring')
-
-            // }
-            throw new Error('Xatolik mavjud')
+            getData(data)
+        } catch (err) {
+            console.log(err.message);
 
         }
-        const data = await req.json()
-
-        getData(data)
-    } catch (err) {
-        console.log(err.message);
-
     }
-}
+    requestApi(api_url)
+})
 
-requestApi(api_url)
+
+
 
 
 function getData(datas) {
+    mainS.classList.remove('hidden')
+    loader.classList.add('hidden')
+
     var today = new Date();
     var dd = String(today.getDate()).padStart(2, '0');
     var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
