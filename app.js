@@ -1,4 +1,4 @@
-const apiKey = '1bffee86355e179e4988c6bfde6dff0c';
+const apiKey = '1f39504ba97d180f07f855eab3c53ea6';
 const input = document.getElementById('input')
 const korish = document.querySelector('.korish')
 const chiqish = document.querySelector('.chiqish')
