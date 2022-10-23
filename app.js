@@ -1,4 +1,4 @@
-const apiKey = '1f39504ba97d180f07f855eab3c53ea6';
+const apiKey = 'ea7249aa34c40425b4bd2ba3de69d9e7';
 const input = document.getElementById('input')
 const korish = document.querySelector('.korish')
 const chiqish = document.querySelector('.chiqish')
@@ -22,7 +22,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault()
     console.log(input.value);
 
-    const api_url = `https://api.openweathermap.org/data/2.5/weather?q=${input.value}&units=metric&appid=${apiKey}`
+    const api_url = `https://api.openweathermap.org/data/2.5/weather?q={input.value}&units=metric&appid={apiKey}`
     nom.innerHTML = input.value
 
     async function requestApi(url) {
