@@ -90,4 +90,3 @@ function getData(datas) {
 
 }
 
-getData(api_url)
