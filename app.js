@@ -87,7 +87,5 @@ function getData(datas) {
 
 
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 070966b0fe593354e353441ac2a062d1e0222894
+getData(api_url)
