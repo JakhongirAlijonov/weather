@@ -22,7 +22,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault()
     console.log(input.value);
 
-    const api_url = `https://api.openweathermap.org/data/2.5/weather?q=input.value&units=metric&appid={API key}`
+    const api_url = `https://api.openweathermap.org/data/2.5/weather?q=${input.value}&units=metric&appid={apiKey}`
     nom.innerHTML = input.value
 
     async function requestApi(url) {
