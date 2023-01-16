@@ -21,7 +21,7 @@ loader.classList.add('hidden')
 form.addEventListener('submit', (e) => {
     e.preventDefault()
 
-    const api_url = `https://api.openweathermap.org/data/2.5/weather?q=${input.value}&units=metric&appid=${apiKey}`
+    const api_url = `https://api.openweathermap.org/data/2.5/weather?q=${input.value}&units=metric&appid={apiKey}`
     nom.innerHTML = input.value
 
     async function requestApi(url) {
@@ -30,9 +30,9 @@ form.addEventListener('submit', (e) => {
             const req = await fetch(url)
 
             if (!req.ok) {
-                // if (!(req.status == 200)) {
-                //     alert('Davlat nomini tekshiring')
-                // }
+                if (!(req.status == 200)) {
+                    alert('Davlat nomini tekshiring. Agar hammasi joyida bolsa xato bizda ')
+                }
                 throw new Error('Xatolik mavjud')
             }
             const data = await req.json()
@@ -87,3 +87,7 @@ function getData(datas) {
 
 
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 070966b0fe593354e353441ac2a062d1e0222894
