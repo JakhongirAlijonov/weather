@@ -1,4 +1,4 @@
-const apiKey = '1bffee86355e179e4988c6bfde6dff0c';
+const apiKey = 'a3f2d9e61d7d3469bc02f290289d3542';
 const input = document.getElementById('input')
 const korish = document.querySelector('.korish')
 const chiqish = document.querySelector('.chiqish')
@@ -20,7 +20,6 @@ loader.classList.add('hidden')
 
 form.addEventListener('submit', (e) => {
     e.preventDefault()
-    console.log(input.value);
 
     const api_url = `https://api.openweathermap.org/data/2.5/weather?q=${input.value}&units=metric&appid=${apiKey}`
     nom.innerHTML = input.value
@@ -65,7 +64,6 @@ function getData(datas) {
     today = mm + '/' + dd + '/' + yyyy;
     sana.innerHTML = `Sana : ${today}`
     const { wind, weather, sys, main } = datas
-    console.log(datas);
     let sec1 = sys.sunset;
     let date1 = new Date(sec1 * 1000);
     let timestr1 = date1.toLocaleTimeString();
@@ -89,5 +87,3 @@ function getData(datas) {
 
 
 }
-
-getData(api_url)
