@@ -83,9 +83,4 @@ function getData(datas) {
     let imageSrc = weather[0].icon
     document.querySelector('.image').setAttribute('src', `https://openweathermap.org/img/wn/${imageSrc}@2x.png`)
 
-
-
-
 }
-
-getData(api_url)
